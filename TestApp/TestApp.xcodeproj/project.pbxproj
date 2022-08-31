@@ -29,7 +29,6 @@
 		E77B3D842868825800B45B05 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77B3D822868825800B45B05 /* MenuTableViewCell.xib */; };
 		E7A548262895793900B93CD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A548252895793900B93CD3 /* NetworkService.swift */; };
 		E7A548282897AC2200B93CD3 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A548272897AC2200B93CD3 /* Results.swift */; };
-		E7B5EC2828AA4B9100D3D477 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5EC2728AA4B9100D3D477 /* Constants.swift */; };
 		E7F5E78928AE90CF00ECA839 /* Extensions + UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5E78828AE90CF00ECA839 /* Extensions + UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		E77B3D822868825800B45B05 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		E7A548252895793900B93CD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E7A548272897AC2200B93CD3 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
-		E7B5EC2728AA4B9100D3D477 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7F5E78828AE90CF00ECA839 /* Extensions + UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,7 +225,6 @@
 		E74EBE1528B0C7A50094C5FD /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				E7B5EC2728AA4B9100D3D477 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 				E7A548282897AC2200B93CD3 /* Results.swift in Sources */,
 				E77B3D73286719E000B45B05 /* ItemTableViewCell.swift in Sources */,
 				E7204CA2286701CB00010B2F /* SceneDelegate.swift in Sources */,
-				E7B5EC2828AA4B9100D3D477 /* Constants.swift in Sources */,
 				E77B3D7C28687CF800B45B05 /* MainViewController.swift in Sources */,
 				E77B3D832868825800B45B05 /* MenuTableViewCell.swift in Sources */,
 			);

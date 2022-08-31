@@ -60,9 +60,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let section = sections[section]
         switch section {
         case .menu:
-            return Constants.menuCount
+            return SectionItems.menuCount
         case .grid:
-            return Constants.gridCount
+            return SectionItems.gridCount
         case .table:
             return results.count
         }
@@ -72,11 +72,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let section = sections[indexPath.section]
         switch section {
         case .menu:
-            return Constants.menuHeight
+            return SectionHeight.menuHeight
         case .grid:
-            return Constants.gridHeight
+            return SectionHeight.gridHeight
         case .table:
-            return Constants.tableHeight
+            return SectionHeight.tableHeight
         }
     }
     
