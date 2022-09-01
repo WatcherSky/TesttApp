@@ -13,7 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let networkService = NetworkService()
-    private var sections: [Section] = [.menu(1, 110), .grid(1, 160), .table(nil, 290)]
+    private let sections: [Section] = [.menu(1, 110),
+                                       .grid(1, 160),
+                                       .table(nil, 290)]
     private var results = [Results]()
     private var itemsShows = 10
     //MARK: - ViewController life Cycle
