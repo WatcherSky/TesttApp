@@ -8,21 +8,8 @@
 import Foundation
 import UIKit
 
-enum Section: Int {
-    case menu
-    case grid
-    case table
+enum Section {
+    case menu(_ count: Int, _ height: CGFloat)
+    case grid(_ count: Int, _ height: CGFloat)
+    case table(_ count: Int?, _ height: CGFloat)
 }
-
-
-enum SectionItems {
-    static let menuCount = 1
-    static let gridCount = 1
-}
-
-enum SectionHeight {
-    static let menuHeight: CGFloat = 110
-    static let gridHeight: CGFloat = 160
-    static let tableHeight: CGFloat = 290
-}
- 

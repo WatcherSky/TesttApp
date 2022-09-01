@@ -13,10 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let networkService = NetworkService()
-    private var sections: [Section] = [.menu, .grid, .table]
+    private var sections: [Section] = [.menu(1, 110), .grid(1, 160), .table(nil, 290)]
     private var results = [Results]()
     private var itemsShows = 10
-    
     //MARK: - ViewController life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +58,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = sections[section]
         switch section {
-        case .menu:
-            return SectionItems.menuCount
-        case .grid:
-            return SectionItems.gridCount
+        case .menu(let count, _):
+            return count
+        case .grid(let count, _):
+            return count
         case .table:
             return results.count
         }
@@ -71,12 +70,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = sections[indexPath.section]
         switch section {
-        case .menu:
-            return SectionHeight.menuHeight
-        case .grid:
-            return SectionHeight.gridHeight
-        case .table:
-            return SectionHeight.tableHeight
+        case .menu(_, let menuHeight):
+            return menuHeight
+        case .grid(_, let gridHeight):
+            return gridHeight
+        case .table(_, let tableHeight):
+            return tableHeight
         }
     }
     
