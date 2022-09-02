@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class Results {
+struct Results {
     var trackName: String?
     var trackPrice: Double?
     var currency: String?

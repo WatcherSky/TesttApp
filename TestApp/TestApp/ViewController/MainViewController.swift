@@ -12,10 +12,10 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet private weak var tableView: UITableView!
     
-    private let networkService = NetworkService()
-    private let sections: [Section] = [.menu(1, 110),
-                                       .grid(1, 160),
-                                       .table(nil, 290)]
+    private var networkService = NetworkService()
+    private let sections: [Section] = [.menu(1, 110, 0),
+                                       .grid(1, 160, 4),
+                                       .table(nil, 290, 0)]
     private var results = [Results]()
     private var itemsShows = 10
     //MARK: - ViewController life Cycle
@@ -23,7 +23,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupNetworkService()
+        networkService.setViewDelegate(networkDelegate: self)
     }
+    
+//    required init(networkService: NetworkService) {
+//        self.networkService = networkService
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     //MARK: - Methods
     private func setupTableView() {        
@@ -38,8 +48,14 @@ class MainViewController: UIViewController {
     }
     
     private func setupNetworkService() {
-        networkService.setViewDelegate(networkDelegate: self)
-        networkService.getTracks(limit: itemsShows)
+        networkService.getTracks(limit: itemsShows) { results in
+            switch results {
+            case .success(let results):
+                self.results = results
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -60,9 +76,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let section = sections[section]
         switch section {
-        case .menu(let count, _):
+        case .menu(let count, _, _):
             return count
-        case .grid(let count, _):
+        case .grid(let count, _, _):
             return count
         case .table:
             return results.count
@@ -72,11 +88,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = sections[indexPath.section]
         switch section {
-        case .menu(_, let menuHeight):
+        case .menu(_, let menuHeight, _):
             return menuHeight
-        case .grid(_, let gridHeight):
+        case .grid(_, let gridHeight, _):
             return gridHeight
-        case .table(_, let tableHeight):
+        case .table(_, let tableHeight, _):
             return tableHeight
         }
     }
@@ -104,8 +120,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let section = sections[section]
         
         switch section {
-        case .grid:
-            return CGFloat(4)
+        case .grid(_, _, let headerHeight):
+            return headerHeight
         default:
             return 0
         }
@@ -116,6 +132,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         headerView.backgroundColor = UIColor.lightGray
         return headerView
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row <= results.count - 5 && results.count <= 40 {
+            itemsShows += 10
+            setupNetworkService()
+        }
+    }
 }
-
-//COMMENTS

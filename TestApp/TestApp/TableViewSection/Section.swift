@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 enum Section {
-    case menu(_ count: Int, _ height: CGFloat)
-    case grid(_ count: Int, _ height: CGFloat)
-    case table(_ count: Int?, _ height: CGFloat)
+    case menu(_ count: Int, _ height: CGFloat, _ headerHeight: CGFloat?)
+    case grid(_ count: Int, _ height: CGFloat, _ headerHeight: CGFloat)
+    case table(_ count: Int?, _ height: CGFloat, _ headerHeight: CGFloat?)
 }
