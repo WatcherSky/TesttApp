@@ -35,10 +35,7 @@ class MainViewController: UIViewController {
     }
 
     //MARK: - Methods
-    private func setupTableView() {        
-        tableView.contentInsetAdjustmentBehavior = .never
-        tableView.delegate = self
-        tableView.dataSource = self
+    private func setupTableView() {
         tableView.sectionHeaderTopPadding = 0
         
         tableView.registerCell(MenuTableViewCell.self)

@@ -27,10 +27,6 @@ class GridTableViewCell: UITableViewCell {
     
     
     private func setupCollectionView() {
-        collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
         collectionView.registerCell(GridCollectionViewCell.self)
     }
     
