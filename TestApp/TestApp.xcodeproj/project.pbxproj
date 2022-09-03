@@ -29,6 +29,14 @@
 		E77B3D842868825800B45B05 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E77B3D822868825800B45B05 /* MenuTableViewCell.xib */; };
 		E7A548262895793900B93CD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A548252895793900B93CD3 /* NetworkService.swift */; };
 		E7A548282897AC2200B93CD3 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A548272897AC2200B93CD3 /* Results.swift */; };
+		E7C3AA2128C3A11400A655D0 /* FavouriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C3AA2028C3A11400A655D0 /* FavouriteViewController.storyboard */; };
+		E7C3AA2328C3A19500A655D0 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3AA2228C3A19500A655D0 /* FavouriteViewController.swift */; };
+		E7C3AA2528C3A3A400A655D0 /* MessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C3AA2428C3A3A400A655D0 /* MessageViewController.storyboard */; };
+		E7C3AA2728C3A3E800A655D0 /* ParlorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C3AA2628C3A3E800A655D0 /* ParlorViewController.storyboard */; };
+		E7C3AA2928C3A44100A655D0 /* ApplyNewAdViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C3AA2828C3A44100A655D0 /* ApplyNewAdViewController.storyboard */; };
+		E7C3AA2B28C3A44F00A655D0 /* ApplyNewAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3AA2A28C3A44F00A655D0 /* ApplyNewAdViewController.swift */; };
+		E7C3AA2D28C3A45C00A655D0 /* ParlorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3AA2C28C3A45C00A655D0 /* ParlorViewController.swift */; };
+		E7C3AA2F28C3A46E00A655D0 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3AA2E28C3A46E00A655D0 /* MessageViewController.swift */; };
 		E7F5E78928AE90CF00ECA839 /* Extensions + UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5E78828AE90CF00ECA839 /* Extensions + UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +67,14 @@
 		E77B3D822868825800B45B05 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		E7A548252895793900B93CD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E7A548272897AC2200B93CD3 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		E7C3AA2028C3A11400A655D0 /* FavouriteViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouriteViewController.storyboard; sourceTree = "<group>"; };
+		E7C3AA2228C3A19500A655D0 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		E7C3AA2428C3A3A400A655D0 /* MessageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessageViewController.storyboard; sourceTree = "<group>"; };
+		E7C3AA2628C3A3E800A655D0 /* ParlorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParlorViewController.storyboard; sourceTree = "<group>"; };
+		E7C3AA2828C3A44100A655D0 /* ApplyNewAdViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplyNewAdViewController.storyboard; sourceTree = "<group>"; };
+		E7C3AA2A28C3A44F00A655D0 /* ApplyNewAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyNewAdViewController.swift; sourceTree = "<group>"; };
+		E7C3AA2C28C3A45C00A655D0 /* ParlorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParlorViewController.swift; sourceTree = "<group>"; };
+		E7C3AA2E28C3A46E00A655D0 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E7F5E78828AE90CF00ECA839 /* Extensions + UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,12 +130,11 @@
 			children = (
 				E77B3D872868944400B45B05 /* AppSceneDelegate */,
 				E7F5E78A28AE90F500ECA839 /* Extensions */,
-				E74EBE1528B0C7A50094C5FD /* Constants */,
+				E74EBE1528B0C7A50094C5FD /* NetworkService */,
 				E76E2964288A8696002EE063 /* Model */,
-				E74EBE0F28B0C63B0094C5FD /* ViewController */,
+				E74EBE0F28B0C63B0094C5FD /* MainViewController */,
 				E74EBE1428B0C7800094C5FD /* TableViewSection */,
-				E74EBE1128B0C6AA0094C5FD /* TableViewCells */,
-				E74EBE1328B0C6F80094C5FD /* Storyboard */,
+				E74EBE1328B0C6F80094C5FD /* TabBarViewController */,
 				E74EBE1228B0C6F10094C5FD /* Assets */,
 				E7204CB0286701CE00010B2F /* Info.plist */,
 				E7F5E78B28AE910F00ECA839 /* SupportingFiles */,
@@ -154,48 +169,14 @@
 			path = MenuCollectionViewCell;
 			sourceTree = "<group>";
 		};
-		E74EBE0C28B0C4C90094C5FD /* MenuViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				E77B3D852868825F00B45B05 /* MenuTableViewCell */,
-				E7204CC6286706E100010B2F /* MenuCollectionViewCell */,
-			);
-			path = MenuViewCell;
-			sourceTree = "<group>";
-		};
-		E74EBE0D28B0C4D80094C5FD /* GridViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				E77B3D862868941A00B45B05 /* GridTableViewCell */,
-				E7204CBE286705D700010B2F /* GridCollectionViewCell */,
-			);
-			path = GridViewCell;
-			sourceTree = "<group>";
-		};
-		E74EBE0E28B0C4F10094C5FD /* ItemViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				E7204CBF286705E100010B2F /* ItemTableViewCell */,
-			);
-			path = ItemViewCell;
-			sourceTree = "<group>";
-		};
-		E74EBE0F28B0C63B0094C5FD /* ViewController */ = {
+		E74EBE0F28B0C63B0094C5FD /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E77B3D7B28687CF800B45B05 /* MainViewController.swift */,
+				E7204CA5286701CB00010B2F /* Main.storyboard */,
+				E7C3AA3028C3AAC600A655D0 /* Cells */,
 			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		E74EBE1128B0C6AA0094C5FD /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				E74EBE0C28B0C4C90094C5FD /* MenuViewCell */,
-				E74EBE0D28B0C4D80094C5FD /* GridViewCell */,
-				E74EBE0E28B0C4F10094C5FD /* ItemViewCell */,
-			);
-			path = TableViewCells;
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		E74EBE1228B0C6F10094C5FD /* Assets */ = {
@@ -206,12 +187,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		E74EBE1328B0C6F80094C5FD /* Storyboard */ = {
+		E74EBE1328B0C6F80094C5FD /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E7204CA5286701CB00010B2F /* Main.storyboard */,
+				E7C3AA3528C3AC8900A655D0 /* ApplyNewAdViewController */,
+				E7C3AA3628C3ACC400A655D0 /* ParlorViewController */,
+				E7C3AA3728C3ACD500A655D0 /* MessageViewController */,
+				E7C3AA3828C3ACE600A655D0 /* FavouriteViewController */,
 			);
-			path = Storyboard;
+			path = TabBarViewController;
 			sourceTree = "<group>";
 		};
 		E74EBE1428B0C7800094C5FD /* TableViewSection */ = {
@@ -222,18 +206,18 @@
 			path = TableViewSection;
 			sourceTree = "<group>";
 		};
-		E74EBE1528B0C7A50094C5FD /* Constants */ = {
+		E74EBE1528B0C7A50094C5FD /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				E7A548252895793900B93CD3 /* NetworkService.swift */,
 			);
-			path = Constants;
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		E76E2964288A8696002EE063 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E7A548272897AC2200B93CD3 /* Results.swift */,
-				E7A548252895793900B93CD3 /* NetworkService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +247,78 @@
 				E7204CA1286701CB00010B2F /* SceneDelegate.swift */,
 			);
 			path = AppSceneDelegate;
+			sourceTree = "<group>";
+		};
+		E7C3AA3028C3AAC600A655D0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E7C3AA3128C3AACC00A655D0 /* MenuViewCells */,
+				E7C3AA3328C3AB3300A655D0 /* GridViewCells */,
+				E7C3AA3428C3AC2700A655D0 /* ItemViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E7C3AA3128C3AACC00A655D0 /* MenuViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E77B3D852868825F00B45B05 /* MenuTableViewCell */,
+				E7204CC6286706E100010B2F /* MenuCollectionViewCell */,
+			);
+			path = MenuViewCells;
+			sourceTree = "<group>";
+		};
+		E7C3AA3328C3AB3300A655D0 /* GridViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E77B3D862868941A00B45B05 /* GridTableViewCell */,
+				E7204CBE286705D700010B2F /* GridCollectionViewCell */,
+			);
+			path = GridViewCells;
+			sourceTree = "<group>";
+		};
+		E7C3AA3428C3AC2700A655D0 /* ItemViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E7204CBF286705E100010B2F /* ItemTableViewCell */,
+			);
+			path = ItemViewCells;
+			sourceTree = "<group>";
+		};
+		E7C3AA3528C3AC8900A655D0 /* ApplyNewAdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7C3AA2828C3A44100A655D0 /* ApplyNewAdViewController.storyboard */,
+				E7C3AA2A28C3A44F00A655D0 /* ApplyNewAdViewController.swift */,
+			);
+			path = ApplyNewAdViewController;
+			sourceTree = "<group>";
+		};
+		E7C3AA3628C3ACC400A655D0 /* ParlorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7C3AA2628C3A3E800A655D0 /* ParlorViewController.storyboard */,
+				E7C3AA2C28C3A45C00A655D0 /* ParlorViewController.swift */,
+			);
+			path = ParlorViewController;
+			sourceTree = "<group>";
+		};
+		E7C3AA3728C3ACD500A655D0 /* MessageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7C3AA2E28C3A46E00A655D0 /* MessageViewController.swift */,
+				E7C3AA2428C3A3A400A655D0 /* MessageViewController.storyboard */,
+			);
+			path = MessageViewController;
+			sourceTree = "<group>";
+		};
+		E7C3AA3828C3ACE600A655D0 /* FavouriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7C3AA2028C3A11400A655D0 /* FavouriteViewController.storyboard */,
+				E7C3AA2228C3A19500A655D0 /* FavouriteViewController.swift */,
+			);
+			path = FavouriteViewController;
 			sourceTree = "<group>";
 		};
 		E7F5E78A28AE90F500ECA839 /* Extensions */ = {
@@ -344,7 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77B3D6E28670B2F00B45B05 /* GridCollectionViewCell.xib in Resources */,
+				E7C3AA2928C3A44100A655D0 /* ApplyNewAdViewController.storyboard in Resources */,
+				E7C3AA2128C3A11400A655D0 /* FavouriteViewController.storyboard in Resources */,
+				E7C3AA2528C3A3A400A655D0 /* MessageViewController.storyboard in Resources */,
 				E7204CAF286701CE00010B2F /* LaunchScreen.storyboard in Resources */,
+				E7C3AA2728C3A3E800A655D0 /* ParlorViewController.storyboard in Resources */,
 				E77B3D6A28670AE600B45B05 /* MenuCollectionViewCell.xib in Resources */,
 				E7204CAC286701CE00010B2F /* Assets.xcassets in Resources */,
 				E77B3D74286719E000B45B05 /* ItemTableViewCell.xib in Resources */,
@@ -408,14 +468,18 @@
 				E77B3D772867A21D00B45B05 /* GridTableViewCell.swift in Sources */,
 				E7204CA0286701CB00010B2F /* AppDelegate.swift in Sources */,
 				E77B3D6D28670B2F00B45B05 /* GridCollectionViewCell.swift in Sources */,
+				E7C3AA2D28C3A45C00A655D0 /* ParlorViewController.swift in Sources */,
 				E77B3D7E28687F4800B45B05 /* Section.swift in Sources */,
 				E7F5E78928AE90CF00ECA839 /* Extensions + UICollectionView.swift in Sources */,
 				E7A548262895793900B93CD3 /* NetworkService.swift in Sources */,
 				E778149628A70C0E00D25358 /* Extension + UITableView.swift in Sources */,
+				E7C3AA2F28C3A46E00A655D0 /* MessageViewController.swift in Sources */,
 				E7A548282897AC2200B93CD3 /* Results.swift in Sources */,
 				E77B3D73286719E000B45B05 /* ItemTableViewCell.swift in Sources */,
 				E7204CA2286701CB00010B2F /* SceneDelegate.swift in Sources */,
 				E77B3D7C28687CF800B45B05 /* MainViewController.swift in Sources */,
+				E7C3AA2B28C3A44F00A655D0 /* ApplyNewAdViewController.swift in Sources */,
+				E7C3AA2328C3A19500A655D0 /* FavouriteViewController.swift in Sources */,
 				E77B3D832868825800B45B05 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

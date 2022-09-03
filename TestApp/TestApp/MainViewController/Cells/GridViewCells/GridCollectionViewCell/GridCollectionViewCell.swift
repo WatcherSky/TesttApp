@@ -9,11 +9,16 @@ import UIKit
 
 class GridCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setCell()
+    }
+    
+    
+    func configureCell(text: String) {
+        nameLabel.text = text
     }
     
     private func setCell() {

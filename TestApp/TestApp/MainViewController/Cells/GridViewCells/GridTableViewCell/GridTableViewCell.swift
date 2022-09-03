@@ -39,7 +39,7 @@ extension GridTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueCell(GridCollectionViewCell.self, for: indexPath)
-        cell.nameLabel.text = gridItemNames[indexPath.row]
+        cell.configureCell(text: gridItemNames[indexPath.row])
         return cell
     }
 }
