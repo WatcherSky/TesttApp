@@ -14,12 +14,12 @@ protocol NetworkServiceDelegate: AnyObject {
     func fetchTracks(results: [Results])
 }
 
-class NetworkService {
+protocol Service {
+    func getTracks(limit: Int, completion: @escaping (Result<[Results], Error>) -> Void)
+}
+
+class NetworkService: Service {
     private weak var delegate: NetworkServiceDelegate?
-    
-//    func setViewDelegate(networkDelegate: NetworkServiceDelegate) {
-//        self.delegate = networkDelegate
-//    }
     
     init(delegate: NetworkServiceDelegate) {
         self.delegate = delegate
@@ -36,7 +36,6 @@ class NetworkService {
             }
         }
     }
-    
     
     private func fetchTracks(limit: Int, completion: @escaping (Result<[Results], Error>) -> Void) {
         let url = "https://itunes.apple.com/search"

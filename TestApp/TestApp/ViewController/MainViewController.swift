@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet private weak var tableView: UITableView!
     
-    private var networkService: NetworkService!
+    private var networkService: Service!
     private let sections: [Section] = [.menu(1, 110, 0),
                                        .grid(1, 160, 4),
                                        .table(nil, 290, 0)]
@@ -23,6 +23,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupNetworkService()
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,6 +51,7 @@ class MainViewController: UIViewController {
             switch results {
             case .success(let results):
                 self.results = results
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -129,7 +134,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row <= results.count - 5 && results.count <= 40 {
+        if indexPath.row == results.count - 2 && results.count < 40 {
             itemsShows += 10
             setupNetworkService()
         }
