@@ -17,10 +17,6 @@ class MenuTableViewCell: UITableViewCell {
         setupCollectionView()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .never
