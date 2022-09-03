@@ -109,9 +109,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .table:
             let cell = tableView.dequeueCell(ItemTableViewCell.self, for: indexPath)
-            cell.resultsFromApi = results[indexPath.row]
-            cell.setupUI()
-            cell.setupDateLabel()
+            cell.configureCell(resultsFromApi: results[indexPath.row])
             return cell
         }
     }

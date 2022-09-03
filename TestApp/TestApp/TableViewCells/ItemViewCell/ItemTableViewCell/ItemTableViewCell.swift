@@ -15,12 +15,8 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var itemImageView: UIImageView!
     
-    var resultsFromApi: Results?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupUI()
-        setupDateLabel()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,10 +27,8 @@ class ItemTableViewCell: UITableViewCell {
         super.prepareForReuse()
     }
     
-    func setupUI() {
-        guard let resultsFromApi = resultsFromApi else {
-            return
-        }
+    func configureCell(resultsFromApi: Results) {
+        
         nameLabel.text = resultsFromApi.trackName
         descriptionLabel.text = "Описание отсутствует. На бэке его нет. К сожалению."
         
@@ -48,16 +42,20 @@ class ItemTableViewCell: UITableViewCell {
             let url = URL(string: urlFromApi)
             itemImageView.kf.setImage(with: url)
         }
+        
+        setupDateLabel(resultsFromApi: resultsFromApi)
     }
     
-    func setupDateLabel() {
+    func setupDateLabel(resultsFromApi: Results) {
         let dateFormatter = ISO8601DateFormatter()
-        guard let releaseDateText = resultsFromApi?.releaseDate else {
+        
+        guard let releaseDate = resultsFromApi.releaseDate else {
             return
         }
-        guard let getDateFromJson = dateFormatter.date(from: releaseDateText) else {
+        guard let getDateFromJson = dateFormatter.date(from: releaseDate) else {
             return
         }
+        
         let dateFormatterToChange = DateFormatter()
         dateFormatterToChange.dateFormat = "dd MMMM"
         let changedDateFromJson = dateFormatterToChange.string(from: getDateFromJson)
