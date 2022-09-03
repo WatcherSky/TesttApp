@@ -10,11 +10,11 @@ import Alamofire
 import SwiftyJSON
 
 struct Results {
-    var trackName: String?
-    var trackPrice: Double?
-    var currency: String?
-    var releaseDate: String?
-    var artworkUrl60: String?
+    let trackName: String?
+    let trackPrice: Double?
+    let currency: String?
+    let releaseDate: String?
+    let artworkUrl60: String?
 
     init(json: JSON) {
         self.trackName = json["trackName"].stringValue

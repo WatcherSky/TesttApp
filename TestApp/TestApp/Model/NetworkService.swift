@@ -17,14 +17,13 @@ protocol NetworkServiceDelegate: AnyObject {
 class NetworkService {
     private weak var delegate: NetworkServiceDelegate?
     
-    func setViewDelegate(networkDelegate: NetworkServiceDelegate) {
-        self.delegate = networkDelegate
-    }
-    
-//    init(networkDelegate: NetworkServiceDelegate) {
+//    func setViewDelegate(networkDelegate: NetworkServiceDelegate) {
 //        self.delegate = networkDelegate
-//    } Не уверен что тут правильно... Кажется правильно)
-//  Парсим через Data а не через [T] К этому вернусь...
+//    }
+    
+    init(delegate: NetworkServiceDelegate) {
+        self.delegate = delegate
+    }
     
     func getTracks(limit: Int, completion: @escaping (Result<[Results], Error>) -> Void) {
         fetchTracks(limit: limit) { a in

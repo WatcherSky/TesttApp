@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet private weak var tableView: UITableView!
     
-    private var networkService = NetworkService()
+    private var networkService: NetworkService!
     private let sections: [Section] = [.menu(1, 110, 0),
                                        .grid(1, 160, 4),
                                        .table(nil, 290, 0)]
@@ -23,18 +23,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupNetworkService()
-        networkService.setViewDelegate(networkDelegate: self)
     }
     
-//    required init(networkService: NetworkService) {
-//        self.networkService = networkService
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.networkService = NetworkService(delegate: self)
+    }
+
     //MARK: - Methods
     private func setupTableView() {        
         tableView.contentInsetAdjustmentBehavior = .never

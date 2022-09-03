@@ -11,10 +11,10 @@ class GridTableViewCell: UITableViewCell {
     @IBOutlet private var collectionView: UICollectionView!
     
     private let itemHeight: CGFloat = 80
-    var gridItemNames = ["Машины", "Магазин запчастей",
-                         "Запчасти", "Коммерческие",
-                         "Штрафы и сервисы", "Ремонт и услуги",
-                         "Kolesa Гид", "Прочее"]
+    private let gridItemNames = ["Машины", "Магазин запчастей",
+                                 "Запчасти", "Коммерческие",
+                                 "Штрафы и сервисы", "Ремонт и услуги",
+                                 "Kolesa Гид", "Прочее"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
