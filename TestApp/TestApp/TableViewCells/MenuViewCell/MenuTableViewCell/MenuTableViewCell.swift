@@ -18,9 +18,6 @@ class MenuTableViewCell: UITableViewCell {
     }
     
     private func setupCollectionView() {
-        collectionView.dataSource = self
-        collectionView.contentInsetAdjustmentBehavior = .never
-        
         collectionView.registerCell(MenuCollectionViewCell.self)
     }
 }

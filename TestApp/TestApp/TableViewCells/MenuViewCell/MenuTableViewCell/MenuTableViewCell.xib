@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="234" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-oX-A6b">
+                    <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-oX-A6b">
                         <rect key="frame" x="0.0" y="0.0" width="234" height="178"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="awV-Pl-L3K">
                             <size key="itemSize" width="110" height="110"/>
@@ -24,6 +24,9 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="lXQ-cI-YRL"/>
+                        </connections>
                     </collectionView>
                 </subviews>
                 <constraints>
