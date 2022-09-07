@@ -26,8 +26,8 @@ class NetworkService: Service {
     }
     
     func getTracks(limit: Int, completion: @escaping (Result<[Results], Error>) -> Void) {
-        fetchTracks(limit: limit) { a in
-            switch a {
+        fetchTracks(limit: limit) { results in
+            switch results {
             case .success(let results):
                 self.delegate?.fetchTracks(results: results)
                 completion(.success(results))
